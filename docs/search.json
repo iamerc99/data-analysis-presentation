@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "presentation.html#fred-vs-db.nomics",
+    "href": "presentation.html#fred-vs-db.nomics",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "FRED vs DB.nomics",
+    "text": "FRED vs DB.nomics\n\n\n\n\n\n\n\n\nFeature\nFRED\nDB.nomics\n\n\n\n\nFocus\nUS + global indicators\nGlobal statistical datasets\n\n\nStrength\nClean charts, API, US focus\nMany providers (Eurostat, OECD, IMF)\n\n\nBest for\nMacroeconomics, finance\nCountry comparisons, international research"
+  },
+  {
+    "objectID": "presentation.html#why-economic-data-matters",
+    "href": "presentation.html#why-economic-data-matters",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Why Economic Data Matters",
+    "text": "Why Economic Data Matters\n\nUnderstanding economic trends\nMaking informed decisions\nWorking with real-world datasets\nFoundation for research and policy analysis"
+  },
+  {
+    "objectID": "presentation.html#student-perspective",
+    "href": "presentation.html#student-perspective",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Student Perspective",
+    "text": "Student Perspective\n\nEducational Value\nResearch and Projects\nSkill Development"
+  },
+  {
+    "objectID": "presentation.html#a.-website-interface",
+    "href": "presentation.html#a.-website-interface",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "A. Website Interface",
+    "text": "A. Website Interface\n\nBoth platforms offer user-friendly web interfaces for browsing, searching, and downloading data.\nThese interfaces make it easy for users to find and visualize economic indicators.\nYou can explore interactive charts, filter data by country or time period, and download results in CSV, Excel, or JSON formats."
+  },
+  {
+    "objectID": "presentation.html#fred-fred.stlouisfed.org",
+    "href": "presentation.html#fred-fred.stlouisfed.org",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "FRED: fred.stlouisfed.org",
+    "text": "FRED: fred.stlouisfed.org"
+  },
+  {
+    "objectID": "presentation.html#fred-search",
+    "href": "presentation.html#fred-search",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "FRED: Search",
+    "text": "FRED: Search"
+  },
+  {
+    "objectID": "presentation.html#fred-view-download",
+    "href": "presentation.html#fred-view-download",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "FRED: View & Download",
+    "text": "FRED: View & Download"
+  },
+  {
+    "objectID": "presentation.html#db.nomics-db.nomics.world",
+    "href": "presentation.html#db.nomics-db.nomics.world",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "DB.NOMICS: db.nomics.world",
+    "text": "DB.NOMICS: db.nomics.world"
+  },
+  {
+    "objectID": "presentation.html#db.nomics-search",
+    "href": "presentation.html#db.nomics-search",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "DB.NOMICS: Search",
+    "text": "DB.NOMICS: Search"
+  },
+  {
+    "objectID": "presentation.html#db.nomics-filters-download",
+    "href": "presentation.html#db.nomics-filters-download",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "DB.NOMICS: Filters & Download",
+    "text": "DB.NOMICS: Filters & Download"
+  },
+  {
+    "objectID": "presentation.html#b.-apis-for-automated-access",
+    "href": "presentation.html#b.-apis-for-automated-access",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "B. APIs for Automated Access",
+    "text": "B. APIs for Automated Access\nAPIs allow programmatic access to economic datasets, enabling faster, reproducible, and automated analysis (Peng, 2011).\n\nR specialized packages:\n\nfredr – For accessing U.S. economic data from FRED.\nrdbnomics – For accessing global datasets from DB.nomics. No API key is needed."
+  },
+  {
+    "objectID": "presentation.html#getting-your-api-key-httpsfred.stlouisfed.orgdocsapiapi_key.html",
+    "href": "presentation.html#getting-your-api-key-httpsfred.stlouisfed.orgdocsapiapi_key.html",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Getting your API key https://fred.stlouisfed.org/docs/api/api_key.html",
+    "text": "Getting your API key https://fred.stlouisfed.org/docs/api/api_key.html"
+  },
+  {
+    "objectID": "presentation.html#request-describe-program-you-are-using",
+    "href": "presentation.html#request-describe-program-you-are-using",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Request & Describe program you are using",
+    "text": "Request & Describe program you are using"
+  },
+  {
+    "objectID": "presentation.html#option-1-spreadsheet",
+    "href": "presentation.html#option-1-spreadsheet",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Option 1: Spreadsheet",
+    "text": "Option 1: Spreadsheet\n\nStep 1: Download Data\n\nGo to FRED or DB.nomics.\n\nExample: GDP of the United States.\n\nClick Download → CSV or Excel. \n\nStep 2: Open in a Spreadsheet\n\nOpen the file in Excel or Google Sheets.\n\nYou’ll see columns like Year and GDP."
+  },
+  {
+    "objectID": "presentation.html#excel-file-5-year-data",
+    "href": "presentation.html#excel-file-5-year-data",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Excel File: 5 year data",
+    "text": "Excel File: 5 year data"
+  },
+  {
+    "objectID": "presentation.html#line-chart-of-gdp-5-year-data",
+    "href": "presentation.html#line-chart-of-gdp-5-year-data",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Line Chart of GDP 5 Year data",
+    "text": "Line Chart of GDP 5 Year data"
+  },
+  {
+    "objectID": "presentation.html#option-2-using-r-language-w-api-key",
+    "href": "presentation.html#option-2-using-r-language-w-api-key",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Option 2: Using R Language w/ API key",
+    "text": "Option 2: Using R Language w/ API key\n# install if needed\ninstall.packages(\"fredr\")\ninstall.packages(\"ggplot2\")\n\nlibrary(fredr)\nlibrary(ggplot2)\n\n# Set your FRED API key\nfredr_set_key(\"YOUR_API_KEY_HERE\")\n\n# GDP data\ngdp &lt;- fredr(series_id = \"GDP\")\n\n# Define series id and time window: last 5 years\nseries_id &lt;- \"GDP\"\nend_date   &lt;- Sys.Date()\nstart_date &lt;- as.Date(end_date) - (5*365)  # approx. 5 years from date\n\n# Fetch the data\ngdp_data &lt;- fredr(\n  series_id        = series_id,\n  observation_start = start_date,\n  observation_end   = end_date\n)\n\n# Tibble\nhead(gdp_data)"
+  },
+  {
+    "objectID": "presentation.html#visualize-data-in-r",
+    "href": "presentation.html#visualize-data-in-r",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Visualize data in R",
+    "text": "Visualize data in R\n# Visualize using ggplot2 \nggplot(gdp_data, aes(x = date, y = value)) +\n  geom_line(color = \"hotpink\", size = 1) +\n  labs(title = \"US GDP (Quarterly) – Last 5 Years\",\n       x     = \"Date\",\n       y     = \"Billions of Dollars\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "presentation.html#exercise",
+    "href": "presentation.html#exercise",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Exercise:",
+    "text": "Exercise:\nStep into the world of data—analyze, visualize, and discover trends like a pro!\n\nChoose a topic on FRED.\nDownload the data as a CSV.\nSave it in your R project folder.\nLoad, analyze, and visualize in R.\n\nHint:\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv"
+  },
+  {
+    "objectID": "presentation.html#using-r-language-wout-api-key",
+    "href": "presentation.html#using-r-language-wout-api-key",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Using R Language w/out API key",
+    "text": "Using R Language w/out API key\n\n# Install packages\ninstall.packages(\"ggplot2\")\ninstall.packages(\"readr\")\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(readr)\n\n# Read CSV\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv\n\n# Inspect\nhead(gdp_data)\n\n# Visualize\nggplot(gdp_data, aes(x = observation_date, y = GDP)) +\n  geom_line(color = \"pick a color\") +\n  labs(title = \"US GDP (Quarterly)\", x = \"Year\", y = \"Billions of Dollars\") +\n  theme_minimal()"
+  }
+]
