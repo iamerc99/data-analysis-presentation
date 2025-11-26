@@ -138,5 +138,61 @@
     "title": "Accessing and Analyzing Data from FRED and DB.nomics",
     "section": "Using R Language w/out API key",
     "text": "Using R Language w/out API key\n\n# Install packages\ninstall.packages(\"ggplot2\")\ninstall.packages(\"readr\")\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(readr)\n\n# Read CSV\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv\n\n# Inspect\nhead(gdp_data)\n\n# Visualize\nggplot(gdp_data, aes(x = observation_date, y = GDP)) +\n  geom_line(color = \"pick a color\") +\n  labs(title = \"US GDP (Quarterly)\", x = \"Year\", y = \"Billions of Dollars\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "handout.html#educational-value",
+    "href": "handout.html#educational-value",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "2.1 Educational Value",
+    "text": "2.1 Educational Value\nAccess to real-world economic data enhances students’ understanding of key economic theories such as GDP, inflation, and unemployment Mankiw (2021), and encourages development of data literacy, quantitative reasoning, and critical analysis, allowing students to connect theoretical knowledge with practical application."
+  },
+  {
+    "objectID": "handout.html#research-and-projects",
+    "href": "handout.html#research-and-projects",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "2.2 Research and Projects",
+    "text": "2.2 Research and Projects\nThe availability of reliable economic data enables students to perform empirical research. It also provides reliable data sources for coursework in economics, finance, public policy, and data analytics."
+  },
+  {
+    "objectID": "handout.html#skill-development",
+    "href": "handout.html#skill-development",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "2.3 Skill Development",
+    "text": "2.3 Skill Development\nWorking with real datasets offers students the opportunity to practice using analytical tools such as Excel, R, Python, and Stata.Through these experiences, they build analytical, statistical, and data visualization skills valued in both academia and the job market."
+  },
+  {
+    "objectID": "handout.html#website-interface",
+    "href": "handout.html#website-interface",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "4.1 Website Interface",
+    "text": "4.1 Website Interface\nBoth platforms provide intuitive interfaces for exploring, visualizing, and downloading datasets.\n\n4.1.1 FRED\n\nGo to fred.stlouisfed.org\nUse the search bar (e.g., type “U.S. Inflation Rate” or “GDP”).\nClick on the desired series.\nExplore the interactive chart.\nClick Download → CSV, Excel, or JSON.\n\n\n\n4.1.2 DB.nomics\n\nGo to db.nomics.world\nUse the search box or browse by provider (e.g., Eurostat, OECD).\nChoose the dataset and variables you need.\nUse filters (e.g., time range, country, indicator).\nClick Download → CSV, XLSX, or JSON.\n\nWebsite interfaces are suitable for quick exploration, data previews, and simple visualizations."
+  },
+  {
+    "objectID": "handout.html#step-1-download-data",
+    "href": "handout.html#step-1-download-data",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "6.1 Step 1: Download Data",
+    "text": "6.1 Step 1: Download Data\nExample: U.S. GDP (Quarterly).\nUsers can download CSV or Excel files directly from FRED or DB.nomics."
+  },
+  {
+    "objectID": "handout.html#step-2-open-in-excel",
+    "href": "handout.html#step-2-open-in-excel",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "6.2 Step 2: Open in Excel",
+    "text": "6.2 Step 2: Open in Excel\n\nOpen the downloaded file in Excel.\nYou’ll usually see columns like Year and GDP."
+  },
+  {
+    "objectID": "handout.html#step-3-create-a-simple-chart",
+    "href": "handout.html#step-3-create-a-simple-chart",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "6.3 Step 3: Create a Simple Chart",
+    "text": "6.3 Step 3: Create a Simple Chart\nHighlight the relevant columns and insert a line chart to visualize trends over time.\n\n\n\nYear\nGDP (USD Trillions)\n\n\n\n\n2020\n19.96\n\n\n2021\n23.43\n\n\n2022\n25.86\n\n\n2023\n27.53\n\n\n2024\n29.15\n\n\n2025\n30.49\n\n\n\nTable 1: Example Dataset (simplified):"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "",
+    "text": "Welcome!\nHere are my files:\n\nPDF File\nHTML File 1\nHTML File 2\nAnother PDF"
   }
 ]
