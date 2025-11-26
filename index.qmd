@@ -8,8 +8,8 @@ theme: minty
 
 Here are my files:
 
-- [PDF File](handout.pdf)
-- [HTML File 1](handout.html)
-- [HTML File 2](presentation.html)
-- [Another PDF](presentation.pdf)
+- [Handout PDF](handout.pdf)
+- [Handout HTML](handout.html)
+- [Presentation HTML](presentation.html)
+- [Presentation PDF](presentation.pdf)
 

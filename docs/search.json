@@ -193,6 +193,20 @@
     "href": "index.html",
     "title": "Accessing and Analyzing Data from FRED and DB.nomics",
     "section": "",
-    "text": "Welcome!\nHere are my files:\n\nPDF File\nHTML File 1\nHTML File 2\nAnother PDF"
+    "text": "Welcome!\nHere are my files:\n\nHandout PDF\nHandout HTML\nPresentation HTML\nPresentation PDF"
+  },
+  {
+    "objectID": "presentation.html#scan-the-qr-code",
+    "href": "presentation.html#scan-the-qr-code",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Scan the QR code",
+    "text": "Scan the QR code\n\nhttps://iamerc99.github.io/data-analysis-presentation/"
+  },
+  {
+    "objectID": "presentation.html#scan-the-qr-code-for-handout",
+    "href": "presentation.html#scan-the-qr-code-for-handout",
+    "title": "Accessing and Analyzing Data from FRED and DB.nomics",
+    "section": "Scan the QR code for Handout",
+    "text": "Scan the QR code for Handout\n\nhttps://iamerc99.github.io/data-analysis-presentation/"
   }
 ]

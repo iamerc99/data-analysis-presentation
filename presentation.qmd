@@ -13,6 +13,15 @@ format:
     transition: fade
 ---
 
+## Scan the QR code for Handout {style="text-align: center;"}
+
+
+![](images/QR.png){fig-align="center" width=50% }
+
+### https://iamerc99.github.io/data-analysis-presentation/
+
+---
+
 # FRED
 
 **Federal Reserve Economic Data**  
@@ -113,6 +122,17 @@ APIs allow programmatic access to economic datasets, enabling **faster, reproduc
 
 ---
 
+## Getting your API key [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html) 
+
+![](images/API01.jpg){ width=100% }
+
+---
+
+## Request & Describe program you are using
+
+![](images/API02.jpg){ width=100% }
+
+---
 
 ### FRED Example
 
@@ -128,22 +148,11 @@ fredr_set_key("YOUR_API_KEY")
 gdp <- fredr(series_id = "GDP")
 
 #Display rows
-head(gdp_data)
+head(gdp)
 ```
 
 ---
 
-## Getting your API key [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html) 
-
-![](images/API01.jpg){ width=100% }
-
----
-
-## Request & Describe program you are using
-
-![](images/API02.jpg){ width=100% }
-
----
 
 # How to Analyze Data 
 
