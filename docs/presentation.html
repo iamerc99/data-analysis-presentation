@@ -215,18 +215,12 @@ Ingrid Anne Mercado (401054032)
 
 <img data-src="images/QR.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"><h3 id="httpsiamerc99.github.iodata-analysis-presentation">https://iamerc99.github.io/data-analysis-presentation/</h3>
 </section>
-<section class="slide level2">
-
-</section>
-<section>
 <section id="fred" class="title-slide slide level1 center">
 <h1>FRED</h1>
 <p><strong>Federal Reserve Economic Data</strong><br>
 FRED is maintained by the <em>Federal Reserve Bank of St.&nbsp;Louis</em> and provides thousands of U.S. and international time-series indicators, including GDP, inflation, employment, interest rates, and financial data (Federal Reserve Bank of St.&nbsp;Louis, 2024).</p>
 </section>
-<section class="slide level2">
 
-</section></section>
 <section>
 <section id="db.nomics" class="title-slide slide level1 center">
 <h1>DB.nomics</h1>
@@ -282,9 +276,6 @@ FRED is maintained by the <em>Federal Reserve Bank of St.&nbsp;Louis</em> and pr
 <li>Research and Projects</li>
 <li>Skill Development</li>
 </ul>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
 <section id="how-to-access-data" class="title-slide slide level1 center">
@@ -360,6 +351,23 @@ FRED is maintained by the <em>Federal Reserve Bank of St.&nbsp;Louis</em> and pr
 </section>
 <section class="slide level2">
 
+<h3 id="dbnomics-example">DBNOMICS Example</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Install &amp; load package </span></span>
+<span id="cb2-2"><a></a><span class="fu">install.packages</span>(<span class="st">"rdbnomics"</span>)</span>
+<span id="cb2-3"><a></a><span class="fu">library</span>(rdbnomics)</span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a><span class="co"># Use the full DBnomics series ID</span></span>
+<span id="cb2-6"><a></a>gdp_pc <span class="ot">&lt;-</span> <span class="fu">rdb</span>(<span class="at">ids =</span> <span class="st">"Provider/Dataset/Series Code"</span>)</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a><span class="fu">head</span>(gdp_pc)</span>
+<span id="cb2-9"><a></a></span>
+<span id="cb2-10"><a></a><span class="fu">plot</span>(</span>
+<span id="cb2-11"><a></a>  gdp_pc<span class="sc">$</span>period, gdp_pc<span class="sc">$</span>value,</span>
+<span id="cb2-12"><a></a>  <span class="at">type =</span> <span class="st">"l"</span>,</span>
+<span id="cb2-13"><a></a>  <span class="at">main =</span> <span class="st">"YOUR TITLE HERE"</span>,</span>
+<span id="cb2-14"><a></a>  <span class="at">xlab =</span> <span class="st">"YOUR X-AXIS LABEL"</span>,</span>
+<span id="cb2-15"><a></a>  <span class="at">ylab =</span> <span class="st">"YOUR Y-AXIS LABEL"</span></span>
+<span id="cb2-16"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section></section>
 <section>
 <section id="how-to-analyze-data" class="title-slide slide level1 center">
@@ -438,43 +446,43 @@ FRED is maintained by the <em>Federal Reserve Bank of St.&nbsp;Louis</em> and pr
 <img data-src="images/gdplinechart.jpg" style="width:100.0%" class="r-stretch"></section>
 <section id="option-2-using-r-language-w-api-key" class="slide level2">
 <h2>Option 2: Using R Language w/ API key</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># install if needed</span></span>
-<span id="cb2-2"><a></a><span class="fu">install.packages</span>(<span class="st">"fredr"</span>)</span>
-<span id="cb2-3"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="fu">library</span>(fredr)</span>
-<span id="cb2-6"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="co"># Set your FRED API key</span></span>
-<span id="cb2-9"><a></a><span class="fu">fredr_set_key</span>(<span class="st">"YOUR_API_KEY_HERE"</span>)</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a><span class="co"># GDP data</span></span>
-<span id="cb2-12"><a></a>gdp <span class="ot">&lt;-</span> <span class="fu">fredr</span>(<span class="at">series_id =</span> <span class="st">"GDP"</span>)</span>
-<span id="cb2-13"><a></a></span>
-<span id="cb2-14"><a></a><span class="co"># Define series id and time window: last 5 years</span></span>
-<span id="cb2-15"><a></a>series_id <span class="ot">&lt;-</span> <span class="st">"GDP"</span></span>
-<span id="cb2-16"><a></a>end_date   <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
-<span id="cb2-17"><a></a>start_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(end_date) <span class="sc">-</span> (<span class="dv">5</span><span class="sc">*</span><span class="dv">365</span>)  <span class="co"># approx. 5 years from date</span></span>
-<span id="cb2-18"><a></a></span>
-<span id="cb2-19"><a></a><span class="co"># Fetch the data</span></span>
-<span id="cb2-20"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">fredr</span>(</span>
-<span id="cb2-21"><a></a>  <span class="at">series_id        =</span> series_id,</span>
-<span id="cb2-22"><a></a>  <span class="at">observation_start =</span> start_date,</span>
-<span id="cb2-23"><a></a>  <span class="at">observation_end   =</span> end_date</span>
-<span id="cb2-24"><a></a>)</span>
-<span id="cb2-25"><a></a></span>
-<span id="cb2-26"><a></a><span class="co"># Tibble</span></span>
-<span id="cb2-27"><a></a><span class="fu">head</span>(gdp_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># install if needed</span></span>
+<span id="cb3-2"><a></a><span class="fu">install.packages</span>(<span class="st">"fredr"</span>)</span>
+<span id="cb3-3"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a><span class="fu">library</span>(fredr)</span>
+<span id="cb3-6"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a><span class="co"># Set your FRED API key</span></span>
+<span id="cb3-9"><a></a><span class="fu">fredr_set_key</span>(<span class="st">"YOUR_API_KEY_HERE"</span>)</span>
+<span id="cb3-10"><a></a></span>
+<span id="cb3-11"><a></a><span class="co"># GDP data</span></span>
+<span id="cb3-12"><a></a>gdp <span class="ot">&lt;-</span> <span class="fu">fredr</span>(<span class="at">series_id =</span> <span class="st">"GDP"</span>)</span>
+<span id="cb3-13"><a></a></span>
+<span id="cb3-14"><a></a><span class="co"># Define series id and time window: last 5 years</span></span>
+<span id="cb3-15"><a></a>series_id <span class="ot">&lt;-</span> <span class="st">"GDP"</span></span>
+<span id="cb3-16"><a></a>end_date   <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
+<span id="cb3-17"><a></a>start_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(end_date) <span class="sc">-</span> (<span class="dv">5</span><span class="sc">*</span><span class="dv">365</span>)  <span class="co"># approx. 5 years from date</span></span>
+<span id="cb3-18"><a></a></span>
+<span id="cb3-19"><a></a><span class="co"># Fetch the data</span></span>
+<span id="cb3-20"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">fredr</span>(</span>
+<span id="cb3-21"><a></a>  <span class="at">series_id        =</span> series_id,</span>
+<span id="cb3-22"><a></a>  <span class="at">observation_start =</span> start_date,</span>
+<span id="cb3-23"><a></a>  <span class="at">observation_end   =</span> end_date</span>
+<span id="cb3-24"><a></a>)</span>
+<span id="cb3-25"><a></a></span>
+<span id="cb3-26"><a></a><span class="co"># Tibble</span></span>
+<span id="cb3-27"><a></a><span class="fu">head</span>(gdp_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="visualize-data-in-r" class="slide level2">
 <h2>Visualize data in R</h2>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Visualize using ggplot2 </span></span>
-<span id="cb3-2"><a></a><span class="fu">ggplot</span>(gdp_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
-<span id="cb3-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"hotpink"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"US GDP (Quarterly) – Last 5 Years"</span>,</span>
-<span id="cb3-5"><a></a>       <span class="at">x     =</span> <span class="st">"Date"</span>,</span>
-<span id="cb3-6"><a></a>       <span class="at">y     =</span> <span class="st">"Billions of Dollars"</span>) <span class="sc">+</span></span>
-<span id="cb3-7"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Visualize using ggplot2 </span></span>
+<span id="cb4-2"><a></a><span class="fu">ggplot</span>(gdp_data, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> value)) <span class="sc">+</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"hotpink"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"US GDP (Quarterly) – Last 5 Years"</span>,</span>
+<span id="cb4-5"><a></a>       <span class="at">x     =</span> <span class="st">"Date"</span>,</span>
+<span id="cb4-6"><a></a>       <span class="at">y     =</span> <span class="st">"Billions of Dollars"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="exercise" class="slide level2">
 <h2>Exercise:</h2>
@@ -486,30 +494,30 @@ FRED is maintained by the <em>Federal Reserve Bank of St.&nbsp;Louis</em> and pr
 <li>Load, analyze, and visualize in R.</li>
 </ul>
 <p><strong>Hint:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="using-r-language-wout-api-key" class="slide level2">
 <h2>Using R Language w/out API key</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a></span>
-<span id="cb5-2"><a></a><span class="co"># Install packages</span></span>
-<span id="cb5-3"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb5-4"><a></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="co"># Load libraries</span></span>
-<span id="cb5-7"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-8"><a></a><span class="fu">library</span>(readr)</span>
-<span id="cb5-9"><a></a></span>
-<span id="cb5-10"><a></a><span class="co"># Read CSV</span></span>
-<span id="cb5-11"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span>
-<span id="cb5-12"><a></a></span>
-<span id="cb5-13"><a></a><span class="co"># Inspect</span></span>
-<span id="cb5-14"><a></a><span class="fu">head</span>(gdp_data)</span>
-<span id="cb5-15"><a></a></span>
-<span id="cb5-16"><a></a><span class="co"># Visualize</span></span>
-<span id="cb5-17"><a></a><span class="fu">ggplot</span>(gdp_data, <span class="fu">aes</span>(<span class="at">x =</span> observation_date, <span class="at">y =</span> GDP)) <span class="sc">+</span></span>
-<span id="cb5-18"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"pick a color"</span>) <span class="sc">+</span></span>
-<span id="cb5-19"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"US GDP (Quarterly)"</span>, <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Billions of Dollars"</span>) <span class="sc">+</span></span>
-<span id="cb5-20"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a></span>
+<span id="cb6-2"><a></a><span class="co"># Install packages</span></span>
+<span id="cb6-3"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb6-4"><a></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
+<span id="cb6-5"><a></a></span>
+<span id="cb6-6"><a></a><span class="co"># Load libraries</span></span>
+<span id="cb6-7"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-8"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb6-9"><a></a></span>
+<span id="cb6-10"><a></a><span class="co"># Read CSV</span></span>
+<span id="cb6-11"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span>
+<span id="cb6-12"><a></a></span>
+<span id="cb6-13"><a></a><span class="co"># Inspect</span></span>
+<span id="cb6-14"><a></a><span class="fu">head</span>(gdp_data)</span>
+<span id="cb6-15"><a></a></span>
+<span id="cb6-16"><a></a><span class="co"># Visualize</span></span>
+<span id="cb6-17"><a></a><span class="fu">ggplot</span>(gdp_data, <span class="fu">aes</span>(<span class="at">x =</span> observation_date, <span class="at">y =</span> GDP)) <span class="sc">+</span></span>
+<span id="cb6-18"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"pick a color"</span>) <span class="sc">+</span></span>
+<span id="cb6-19"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"US GDP (Quarterly)"</span>, <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Billions of Dollars"</span>) <span class="sc">+</span></span>
+<span id="cb6-20"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section></section>

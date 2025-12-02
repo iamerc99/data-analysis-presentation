@@ -20,14 +20,12 @@ format:
 
 ### https://iamerc99.github.io/data-analysis-presentation/
 
----
 
 # FRED
 
 **Federal Reserve Economic Data**  
 FRED is maintained by the *Federal Reserve Bank of St. Louis* and provides thousands of U.S. and international time-series indicators, including GDP, inflation, employment, interest rates, and financial data (Federal Reserve Bank of St. Louis, 2024).
 
----
 
 # DB.nomics
 
@@ -59,8 +57,6 @@ DB.nomics is an *open global data platform* aggregating *macroeconomic statistic
 - Educational Value
 - Research and Projects
 - Skill Development
-
----
 
 # How to Access Data
 
@@ -152,6 +148,28 @@ head(gdp)
 ```
 
 ---
+
+### DBNOMICS Example
+
+```r
+# Install & load package 
+install.packages("rdbnomics")
+library(rdbnomics)
+
+# Use the full DBnomics series ID
+gdp_pc <- rdb(ids = "Provider/Dataset/Series Code")
+
+head(gdp_pc)
+
+plot(
+  gdp_pc$period, gdp_pc$value,
+  type = "l",
+  main = "YOUR TITLE HERE",
+  xlab = "YOUR X-AXIS LABEL",
+  ylab = "YOUR Y-AXIS LABEL"
+)
+
+```
 
 
 # How to Analyze Data 
