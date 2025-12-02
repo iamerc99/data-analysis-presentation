@@ -494,30 +494,31 @@ FRED is maintained by the <em>Federal Reserve Bank of St.&nbsp;Louis</em> and pr
 <li>Load, analyze, and visualize in R.</li>
 </ul>
 <p><strong>Hint:</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="using-r-language-wout-api-key" class="slide level2">
 <h2>Using R Language w/out API key</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a></span>
-<span id="cb6-2"><a></a><span class="co"># Install packages</span></span>
-<span id="cb6-3"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb6-4"><a></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
-<span id="cb6-5"><a></a></span>
-<span id="cb6-6"><a></a><span class="co"># Load libraries</span></span>
-<span id="cb6-7"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb6-8"><a></a><span class="fu">library</span>(readr)</span>
-<span id="cb6-9"><a></a></span>
-<span id="cb6-10"><a></a><span class="co"># Read CSV</span></span>
-<span id="cb6-11"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span>
-<span id="cb6-12"><a></a></span>
-<span id="cb6-13"><a></a><span class="co"># Inspect</span></span>
-<span id="cb6-14"><a></a><span class="fu">head</span>(gdp_data)</span>
-<span id="cb6-15"><a></a></span>
-<span id="cb6-16"><a></a><span class="co"># Visualize</span></span>
-<span id="cb6-17"><a></a><span class="fu">ggplot</span>(gdp_data, <span class="fu">aes</span>(<span class="at">x =</span> observation_date, <span class="at">y =</span> GDP)) <span class="sc">+</span></span>
-<span id="cb6-18"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"pick a color"</span>) <span class="sc">+</span></span>
-<span id="cb6-19"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"US GDP (Quarterly)"</span>, <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Billions of Dollars"</span>) <span class="sc">+</span></span>
-<span id="cb6-20"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Install packages</span></span>
+<span id="cb6-2"><a></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb6-3"><a></a><span class="fu">install.packages</span>(<span class="st">"readr"</span>)</span>
+<span id="cb6-4"><a></a></span>
+<span id="cb6-5"><a></a><span class="co"># Load libraries</span></span>
+<span id="cb6-6"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb6-7"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb6-8"><a></a></span>
+<span id="cb6-9"><a></a><span class="co"># Read CSV</span></span>
+<span id="cb6-10"><a></a>gdp_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"file name here"</span>)  <span class="co"># replace with your filename.csv</span></span>
+<span id="cb6-11"><a></a></span>
+<span id="cb6-12"><a></a><span class="co"># Inspect</span></span>
+<span id="cb6-13"><a></a><span class="fu">head</span>(gdp_data)</span>
+<span id="cb6-14"><a></a></span>
+<span id="cb6-15"><a></a><span class="co"># Visualize</span></span>
+<span id="cb6-16"><a></a><span class="fu">ggplot</span>(gdp_data, <span class="fu">aes</span>(<span class="at">x =</span> observation_date, <span class="at">y =</span> GDP)) <span class="sc">+</span></span>
+<span id="cb6-17"><a></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"pick a color"</span>) <span class="sc">+</span></span>
+<span id="cb6-18"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"US GDP (Quarterly)"</span>, <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Billions of Dollars"</span>) <span class="sc">+</span></span>
+<span id="cb6-19"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section></section>

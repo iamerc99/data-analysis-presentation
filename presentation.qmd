@@ -282,6 +282,8 @@ Step into the world of data—analyze, visualize, and discover trends like a pro
 
 **Hint:**
 ```r
+install.packages("readr")
+
 gdp_data <- read_csv("file name here")  # replace with your filename.csv
 ```
 
@@ -290,7 +292,6 @@ gdp_data <- read_csv("file name here")  # replace with your filename.csv
 ## Using R Language w/out API key
 
 ```r
-
 # Install packages
 install.packages("ggplot2")
 install.packages("readr")

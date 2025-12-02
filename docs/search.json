@@ -130,14 +130,14 @@
     "href": "presentation.html#exercise",
     "title": "Accessing and Analyzing Data from FRED and DB.nomics",
     "section": "Exercise:",
-    "text": "Exercise:\nStep into the world of data—analyze, visualize, and discover trends like a pro!\n\nChoose a topic on FRED.\nDownload the data as a CSV.\nSave it in your R project folder.\nLoad, analyze, and visualize in R.\n\nHint:\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv"
+    "text": "Exercise:\nStep into the world of data—analyze, visualize, and discover trends like a pro!\n\nChoose a topic on FRED.\nDownload the data as a CSV.\nSave it in your R project folder.\nLoad, analyze, and visualize in R.\n\nHint:\ninstall.packages(\"readr\")\n\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv"
   },
   {
     "objectID": "presentation.html#using-r-language-wout-api-key",
     "href": "presentation.html#using-r-language-wout-api-key",
     "title": "Accessing and Analyzing Data from FRED and DB.nomics",
     "section": "Using R Language w/out API key",
-    "text": "Using R Language w/out API key\n\n# Install packages\ninstall.packages(\"ggplot2\")\ninstall.packages(\"readr\")\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(readr)\n\n# Read CSV\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv\n\n# Inspect\nhead(gdp_data)\n\n# Visualize\nggplot(gdp_data, aes(x = observation_date, y = GDP)) +\n  geom_line(color = \"pick a color\") +\n  labs(title = \"US GDP (Quarterly)\", x = \"Year\", y = \"Billions of Dollars\") +\n  theme_minimal()"
+    "text": "Using R Language w/out API key\n# Install packages\ninstall.packages(\"ggplot2\")\ninstall.packages(\"readr\")\n\n# Load libraries\nlibrary(ggplot2)\nlibrary(readr)\n\n# Read CSV\ngdp_data &lt;- read_csv(\"file name here\")  # replace with your filename.csv\n\n# Inspect\nhead(gdp_data)\n\n# Visualize\nggplot(gdp_data, aes(x = observation_date, y = GDP)) +\n  geom_line(color = \"pick a color\") +\n  labs(title = \"US GDP (Quarterly)\", x = \"Year\", y = \"Billions of Dollars\") +\n  theme_minimal()"
   },
   {
     "objectID": "handout.html#educational-value",
