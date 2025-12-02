@@ -314,3 +314,4 @@ ggplot(gdp_data, aes(x = observation_date, y = GDP)) +
 
 ```
 
+# Thank you for Listening! {style="text-align: center;"}
